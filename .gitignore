@@ -124,6 +124,10 @@ testing/web-platform/products/
 # Android Gradle artifacts.
 mobile/android/gradle/.gradle
 
+# Android Gradle build output.
+mobile/android/annotations/**/*.class
+mobile/android/app/omnijar/
+
 # XCode project cruft
 /*.xcodeproj/
 
