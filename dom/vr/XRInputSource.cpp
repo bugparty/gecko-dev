@@ -113,6 +113,18 @@ nsTArray<nsString> GetInputSourceProfile(gfx::VRControllerType aType) {
       id.AssignLiteral("generic-trigger-squeeze-thumbstick");
       profile.AppendElement(id);
       break;
+    case gfx::VRControllerType::ArparaTouch:
+      id.AssignLiteral("Arpara Touch");
+      profile.AppendElement(id);
+      id.AssignLiteral("generic-trigger-squeeze-thumbstick");
+      profile.AppendElement(id);
+      break;
+    case gfx::VRControllerType::Arpara:
+      id.AssignLiteral("Arpara 5k");
+      profile.AppendElement(id);
+      id.AssignLiteral("generic-trigger-squeeze-thumbstick");
+      profile.AppendElement(id);
+      break;
     default:
       NS_WARNING("Unsupported XR input source profile.\n");
       break;
