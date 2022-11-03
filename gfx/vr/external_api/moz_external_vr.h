@@ -151,6 +151,8 @@ enum class VRControllerType : uint8_t {
   PicoGaze,
   PicoG2,
   PicoNeo2,
+  ArparaTouch,
+  Arpara,
   _end
 };
 
