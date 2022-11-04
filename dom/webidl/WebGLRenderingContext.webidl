@@ -1209,3 +1209,8 @@ partial interface mixin WebGLRenderingContextBase {
     [NewObject, Pref="dom.vr.webxr.enabled"]
     Promise<void> makeXRCompatible();
 };
+// https://immersive-web.github.io/webxr/#dom-webglrenderingcontextbase-makexrcompatible
+partial interface mixin WebGLRenderingContextBase {
+[Throws]
+    Promise<void> setCompatibleXRDevice();
+};

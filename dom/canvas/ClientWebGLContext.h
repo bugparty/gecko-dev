@@ -2175,6 +2175,7 @@ class ClientWebGLContext final : public nsICanvasRenderingContextInternal,
   // https://immersive-web.github.io/webxr/#xr-compatible
   bool IsXRCompatible() const;
   already_AddRefed<dom::Promise> MakeXRCompatible(ErrorResult& aRv);
+  already_AddRefed<dom::Promise> SetCompatibleXRDevice(ErrorResult& aRv);
 
  protected:
   bool ShouldResistFingerprinting() const;

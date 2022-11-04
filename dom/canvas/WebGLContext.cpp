@@ -1456,7 +1456,9 @@ WebGLContext::FuncScope::~FuncScope() {
 // --
 
 bool ClientWebGLContext::IsXRCompatible() const { return mXRCompatible; }
-
+already_AddRefed<dom::Promise> ClientWebGLContext::SetCompatibleXRDevice(ErrorResult& aRv) {
+  return MakeXRCompatible(aRv);
+}
 already_AddRefed<dom::Promise> ClientWebGLContext::MakeXRCompatible(
     ErrorResult& aRv) {
   const FuncScope funcScope(*this, "MakeXRCompatible");
