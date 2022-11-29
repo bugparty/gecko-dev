@@ -185,7 +185,7 @@ def install_mobile_android_sdk_or_ndk(url, path):
         elif file_name.endswith(".tar.bz2"):
             cmd = ["tar", "jxf", abspath]
         elif file_name.endswith(".zip"):
-            cmd = ["unzip", "-q", abspath]
+            cmd = ["unzip", "-q", "-u" , "-o" , abspath]
         elif file_name.endswith(".bin"):
             # Execute the .bin file, which unpacks the content.
             mode = os.stat(path).st_mode
