@@ -155,6 +155,14 @@ def install_mobile_android_sdk_or_ndk(url, path):
         file = Path(abspath)
 
         with requests.Session() as session:
+            proxy = {}
+            if "http_proxy" in os.environ:
+                proxy['http'] = os.environ['http_proxy']
+            if "https_proxy" in os.environ:
+                proxy['https'] = os.environ['https_proxy']
+            if proxy:
+                session.proxies.update(proxy)
+
             request = session.head(url)
             remote_file_size = int(request.headers["content-length"])
 
